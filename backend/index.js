@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const config = require("./config.json");
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const express = require("express");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
@@ -357,7 +357,7 @@ app.get("/travel-stories/filter", authenticateToken, async (req, res) => {
       visitedDate: { $gte: start, $lte: end },
     }).sort({ isFavourite: -1 });
 
-    res.status(200).json({stories: filteredStories});
+    res.status(200).json({ stories: filteredStories });
   } catch (error) {
     res.status(500).json({ error: true, message: error.message });
   }
