@@ -72,8 +72,8 @@ const SignUp = () => {
               Adventure
             </h4>
             <p className="text-[15px] text-white leading-6 pr-7 mt-4">
-              Create an account to start documenting your travels and preserving
-              your memories in your personal travel journal.
+              Create an account to start documenting your babys memories and
+              adventures!.
             </p>
           </div>
         </div>
